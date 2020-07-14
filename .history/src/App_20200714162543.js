@@ -12,8 +12,7 @@ class App extends React.Component {
           console.log(this.props)
           this.props.getAname()
         }}>点我获取名字</button>
-        <p>{this.props.name}</p>
-        <p>{this.props.aname}</p>
+        <p>{this.props.Aname}</p>
       </div>
     );
   }
