@@ -1,5 +1,9 @@
 import { createStore} from 'redux'
 import reducer from './reducer'
-const store = createStore(reducer,{name:'yangjing'})
+const state = {
+  name: 'yangjing',
+  age: 18
+}
+const store = createStore(reducer,state)
 
 export default store

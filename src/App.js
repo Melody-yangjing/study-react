@@ -2,6 +2,11 @@ import React from 'react';
 import { connect } from 'react-redux'
 import { getAname } from './store/action'
 class App extends React.Component {
+
+  componentDidMount() {
+    console.log(this.props)
+  }
+
   render() {
     return (
       <div>
@@ -12,7 +17,8 @@ class App extends React.Component {
           console.log(this.props)
           this.props.getAname()
         }}>点我获取名字</button>
-        <p>{this.props.name}</p>
+        <br/>
+        <span>{this.props.name}</span>----<span>{this.props.age}</span>
         <p>{this.props.aname}</p>
       </div>
     );
@@ -22,7 +28,8 @@ class App extends React.Component {
 const mapStateToProps = (state /*, ownProps*/) => {
   return {
     name: state.name,
-    aname:state.aname
+    age: state.age,
+    aname: state.aname
   };
 };
 
